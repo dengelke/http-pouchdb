@@ -19,7 +19,7 @@ npm install pouchdb http-pouchdb
 
 ```javascript
 var PouchDB = require('pouchdb');
-var HTTPPouchDB = require('http-pouchdb')(PouchDB, 'http://localhost:5984');
+var HTTPPouchDB = require('http-pouchdb')(PouchDB, 'http://localhost:5984/');
 
 var db = new HTTPPouchDB('_users');
 console.log(HTTPPouchDB.isHTTPPouchDB) //-> true
