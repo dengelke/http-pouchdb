@@ -18,7 +18,7 @@ module.exports = function (PouchDB, url, opts) {
     return new Promise(function (resolve, reject) {
       var xhr = new XHR();
       xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
+        if (xhr.readyState === 4 && xhr.status) {
           resolve(JSON.parse(xhr.responseText));
         }
       };
